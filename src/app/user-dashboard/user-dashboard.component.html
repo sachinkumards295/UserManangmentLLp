@@ -1,0 +1,45 @@
+
+<label class="user-title">
+    User Details
+</label>
+
+<label>
+</label>
+<div class="container">
+
+<app-modal *ngIf="showUser || updateDetais " [updateDetais] = "updateDetais" [showUser] = "showUser" [dataId] = "dataId"></app-modal>
+
+<table style="width:100%">
+    <tr>
+        <th><button class="add" (click)="openModal()"> Add User</button> </th>
+      <th>id</th>
+      <th>firstname</th>
+      <th>middlename</th>
+      <th>lastname</th>
+      <th>gender</th>
+      <th>birthdate</th>
+      <th>city</th>
+      <th>state</th>
+      <th>country</th>
+      <th>zip</th>
+     
+    </tr>
+    <tr *ngFor="let user of userData" >
+        <th></th>
+      <td>{{user.id}}</td>
+      <td>{{user.firstname}}</td>
+      <td>{{user.middlename}}</td>
+      <td>{{user.lastname}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.birthdate}}</td>
+      <td>{{user.city}}</td>
+      <td>{{user.state}}</td>
+      <td>{{user.country}}</td>
+      <td>{{user.zip}}</td>
+      <td><button class="edit"  (click)="editModal(user.id)"> Edit</button></td>
+      <td><button class="View"  [routerLink]="['/user-details', user.id]"> View</button></td>
+      <td><button class="Delete" (click)="Delete(user.id)"> Delete</button></td>
+    </tr>
+  </table>
+</div>
+

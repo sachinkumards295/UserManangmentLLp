@@ -1,0 +1,18 @@
+
+<table style="width:100%">
+    <tr>
+      <th>id</th>
+      <th>firstname</th>
+      <th>middlename</th>
+      <th>lastname</th>
+      <th>gender</th>
+      <th>birthdate</th>
+      <th>city</th>
+      <th>state</th>
+      <th>country</th>
+      <th>zip</th>
+    </tr>
+    <tr class="data-value" *ngFor="let item of userDataById | keyvalue">
+      <td >{{item.value}}</td>
+    </tr>
+  </table>

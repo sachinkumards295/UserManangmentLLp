@@ -1,0 +1,46 @@
+<div  class="container">
+    <div class="content">
+      <form  [formGroup]="userForm">
+        <div>
+            <p>
+                <label for="firstname">firstname</label>
+                <input type="text" class="form-control" name="firstname" formControlName="firstname" >
+            </p>
+            <p>
+                <label for="middlename">middlename</label>
+                <input type="text" class="form-control" name="middlename" formControlName="middlename" >
+            </p>
+            <p>
+                <label for="lastname">lastname</label>
+                <input type="text" class="form-control" name="lastname" formControlName="lastname" >
+            </p>
+            <p>
+                <label for="gender">gender</label>
+                <input type="text" class="form-control" name="gender" formControlName="gender" >
+            </p>
+            <p>
+                <label for="birthdate">birthdate</label>
+                <input type="text" class="form-control" name="birthdate" formControlName="birthdate" >
+            </p>
+            <p>
+                <label for="city">city</label>
+                <input type="text" class="form-control" name="city" formControlName="city" >
+            </p>
+            <p>
+                <label for="state">state</label>
+                <input type="text" class="form-control" name="state" formControlName="state" >
+            </p>
+            <p>
+                <label for="country">country</label>
+                <input type="text" class="form-control" name="country" formControlName="country" >
+            </p>
+            <p>
+                <label for="zip">zip</label>
+                <input type="text" class="form-control" name="zip" formControlName="zip" >
+            </p>
+            
+        </div>
+      </form>
+      <button (click)="submit()">submit</button>
+    </div>
+    </div>
